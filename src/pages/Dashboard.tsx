@@ -6,14 +6,13 @@ import { useAuth } from '../contexts/useAuth';
 import { 
   Plus, 
   Search, 
-  Filter, 
   Clock, 
   CheckCircle2, 
   AlertCircle,
   TrendingUp,
-  Users,
   Calendar,
-  ChevronRight
+  ChevronRight,
+  Loader2
 } from 'lucide-react';
 import { format } from 'date-fns';
 
