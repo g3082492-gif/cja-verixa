@@ -1,0 +1,82 @@
+﻿
+E:\Audit flow\src\contexts\AuthContext.tsx
+  187:17  error  Fast refresh only works when a file only exports components. Use a new file to share constants or functions between components  react-refresh/only-export-components
+
+E:\Audit flow\src\pages\Dashboard.tsx
+  41:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\Audit flow\src\pages\Dashboard.tsx:41:5
+  39 |
+  40 |   useEffect(() => {
+> 41 |     fetchTasks();
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  42 |   }, [fetchTasks]);
+  43 |
+  44 |   const handleDelete = async (id: string, serial: string) => {  react-hooks/set-state-in-effect
+
+E:\Audit flow\src\pages\Reports.tsx
+  39:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\Audit flow\src\pages\Reports.tsx:39:5
+  37 |
+  38 |   useEffect(() => {
+> 39 |     fetchTasks();
+     |     ^^^^^^^^^^ Avoid calling setState() directly within an effect
+  40 |   }, [fetchTasks]);
+  41 |
+  42 |   if (isLoading) {  react-hooks/set-state-in-effect
+
+E:\Audit flow\src\pages\Settings.tsx
+  46:5  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\Audit flow\src\pages\Settings.tsx:46:5
+  44 |
+  45 |   useEffect(() => {
+> 46 |     fetchData();
+     |     ^^^^^^^^^ Avoid calling setState() directly within an effect
+  47 |   }, [fetchData]);
+  48 |
+  49 |   // --- Staff Actions ---  react-hooks/set-state-in-effect
+
+E:\Audit flow\src\pages\TaskForm.tsx
+  63:5   error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+E:\Audit flow\src\pages\TaskForm.tsx:63:5
+  61 |
+  62 |   useEffect(() => {
+> 63 |     fetchMetadata();
+     |     ^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  64 |     if (!isNew && id) {
+  65 |       fetchTask(id);
+  66 |     }  react-hooks/set-state-in-effect
+  96:13  error  '_id' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  97:24  error  '_sn' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  98:21  error  '_ca' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  99:21  error  '_cb' is assigned a value but never used                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+
+Ô£û 9 problems (9 errors, 0 warnings)
+

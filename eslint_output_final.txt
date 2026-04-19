@@ -1,0 +1,7 @@
+﻿
+E:\Audit flow\src\contexts\AuthContext.tsx
+   1:32  error  'useContext' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+  17:14  error  Fast refresh only works when a file only exports components. Move your React context(s) to a separate file  react-refresh/only-export-components
+
+Ô£û 2 problems (2 errors, 0 warnings)
+
